@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>url Images</title>
+
+    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  text-align: left;
+}
+
+
+#mybutton {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+}
+</style>
+</head>
+<body>
+<h1 style="padding-left:150px; margin-top:40px">Image Urls</h1>
+<div id="mybutton">
+    <input type="button" value="Go back!" onclick="history.back()">
+</div>
+<div class="container">
+    <div class="jumbotron">
+        <table style="width:100%">
+            <tr>
+            <th>Title</th>
+            <th>Description</th>
+            </tr>
+            {% for i in image %}
+            <tr>
+
+                <td><a href="{{ i.cover.url }}">{{i.title}}</a></td>
+                  <td>{{ i.Description }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>
