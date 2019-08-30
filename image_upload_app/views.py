@@ -3,6 +3,7 @@ from .models import Picture
 from .forms import UserForm
 
 
+# image upload
 def index(request):
     if request.method == 'POST':
         form = UserForm(request.POST, request.FILES)
@@ -15,6 +16,7 @@ def index(request):
     return render(request, "image_upload_app/cover.html", {'form': form})
 
 
+# display url's of uploaded images
 def display_url(request):
     if request.method == 'GET':
         # getting all the objects of Post.

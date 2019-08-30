@@ -6,7 +6,7 @@ Image upload uploads images and provide image size and extensions restrictions o
 
 You will need the following programmes properly installed on your computer.
 
-* [Python](https://www.python.org/) 3.5+
+* [Python](https://www.python.org/) 3.6+
 * [Virtual Environment](https://pypi.org/project/virtualenv/)
 
 To install virtual environment on your system use:

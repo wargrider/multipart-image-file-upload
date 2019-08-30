@@ -2,6 +2,7 @@ from django.core.exceptions import ValidationError
 import os
 
 
+# validation for image type
 def validate_file_extension(value):
     ext = os.path.splitext(value.name)[1]  # [0] returns path+filename
     valid_extensions = ['.jpeg', '.png', '.jpg']
@@ -9,6 +10,7 @@ def validate_file_extension(value):
         raise ValidationError(u'Unsupported file extension.')
 
 
+# validation for image size
 def validate_image(self):
     filesize = self.file.size
     megabyte_limit = 5.0
