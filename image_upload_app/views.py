@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-
 from .models import Picture
 from .forms import UserForm
 
